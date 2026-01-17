@@ -3,27 +3,38 @@ class Node {
     int data;
 
     Node(int data) {
-        this.data = data;
         this.next = null;
+        this.data = data;
     }
 }
 
-public class insertionAtEnd {
-    
-    static Node insertAtEnd(Node head, int data) {
-        Node newNode = new Node(data);
+public class deletion {
 
+    static Node delete(Node head, int value) {
         if (head == null) {
-            return newNode;
+            return head;
         }
 
+        if (head.data == value) {
+            return head.next;
+        }
+
+        Node prev = null;
         Node current = head;
-        while (current.next != null) {
+
+        while (current != null && current.data != value) {
+            prev = current;
             current = current.next;
         }
-        current.next = newNode;
+
+        if (current == null) {
+            return head;
+        }
+
+        prev.next = current.next;
 
         return head;
+
     }
 
     static void printList(Node head) {
@@ -33,15 +44,16 @@ public class insertionAtEnd {
             current = current.next;
         }
         System.out.println("null");
-
     }
 
     public static void main(String[] args) {
         Node head = new Node(10);
         head.next = new Node(20);
+        head.next.next = new Node(40);
 
-        head = insertAtEnd(head, 5);
+        head = delete(head, 10);
+
         printList(head);
-    }
 
+    }
 }
