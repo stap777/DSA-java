@@ -51,7 +51,7 @@ public class deletion {
         head.next = new Node(20);
         head.next.next = new Node(40);
 
-        head = delete(head, 10);
+        head = delete(head, 90);
 
         printList(head);
 
