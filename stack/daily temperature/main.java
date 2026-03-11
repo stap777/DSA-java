@@ -18,7 +18,7 @@ public class main {
             stack.push(i);
         }
         
-        while (stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             output[stack.pop()] = 0;
         }
         
