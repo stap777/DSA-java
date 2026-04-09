@@ -2,7 +2,7 @@
 // implementing stack using a linkd list 
 
 
-/* logic =  like what we use to do in array keep track of top we dont have to do that here as we allready 
+/* logic =  like what we use to do in array keep track of top we dont have to do that here as we already 
 have head Node we just need to make sure we change head to head.next every time we pop
 Push:
 newNode.next = top

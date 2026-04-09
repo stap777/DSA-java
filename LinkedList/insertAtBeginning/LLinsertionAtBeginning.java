@@ -24,7 +24,7 @@ public class LLinsertionAtBeginning {
 
         Node current = head;
         while (current != null) {
-            System.err.println(current.data + " -> ");
+            System.out.println(current.data + " -> ");
             current = current.next;
         }
         System.err.println("null");

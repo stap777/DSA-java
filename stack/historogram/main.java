@@ -31,7 +31,7 @@ public class main {
     }
 
     public static void main(String [] args) {
-        int [] arr = {3,4,6,8};
+        int [] arr = {2,1,2};
 
         int [] res = histrogram(arr);
 
